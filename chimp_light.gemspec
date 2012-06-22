@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+require File.expand_path('../lib/chimp_light/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ['Alex Farrill']
@@ -12,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = 'chimp_light'
   gem.require_paths = ['lib']
-  gem.version       = '0.0.1'
+  gem.version       = ChimpLight::VERSION
   
   gem.add_dependency('curb', '>= 0.7.15')
 end

@@ -1,6 +1,6 @@
 # ChimpLight
 
-TODO: Write a gem description
+A lightweight MailChimp API wrapper using libcurl
 
 ## Installation
 
@@ -18,7 +18,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+* Instantiate with your API key
+
+$mail_chimp = ChimpLight::Api.new 'my_apikey'
+
+* Now refer to the MailChimp API - http://apidocs.mailchimp.com/ and call any API command you need to like so:
+
+$mail_chimp.listSubscribe :id => 'mylistid', :email_address => 'me@example.com'
+
+## Advanced configuration
+
+* MailChimp API version - default is '1.3', to override:
+
+$mail_chimp = ChimpLight::Api.new 'my_apikey', :version => '1.2'
+
+* Data center - default is 'us1', to override:
+
+$mail_chimp = ChimpLight::Api.new 'my_apikey', :dc => 'us2'
+
+* SSL - default is off, to override:
+
+$mail_chimp = ChimpLight::Api.new 'my_apikey', :ssl => true
 
 ## Contributing
 
