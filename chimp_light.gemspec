@@ -4,8 +4,8 @@ require File.expand_path('../lib/chimp_light/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Alex Farrill"]
   gem.email         = ["alex.farrill@gmail.com"]
-  gem.description   = %q{ Lightweight way to use the MailChimp API via libcurl }
-  gem.summary       = %q{ Lightweight way to use the MailChimp API via libcurl }
+  gem.description   = %q{ A lightweight MailChimp API wrapper using libcurl }
+  gem.summary       = %q{ A lightweight MailChimp API wrapper using libcurl }
   gem.homepage      = "https://github.com/alexfarrill/chimp_light"
 
   gem.files         = `git ls-files`.split($\)
@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "chimp_light"
   gem.require_paths = ["lib"]
   gem.version       = ChimpLight::VERSION
+  
+  gem.add_dependency('curb', '>= 0.7.15')
 end
